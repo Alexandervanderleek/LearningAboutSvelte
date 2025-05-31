@@ -4,10 +4,11 @@ WORKDIR /app
 
 COPY . .
 
-WORKDIR /app/backend
-RUN npm ci
+WORKDIR /app/frontend
+RUN npm i
 
-RUN npm run build
+WORKDIR /app/backend
+RUN npm i
 
 EXPOSE 3000
 
